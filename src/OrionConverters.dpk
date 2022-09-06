@@ -1,0 +1,44 @@
+package OrionConverters;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  dbrtl,
+  fmx,
+  RESTComponents;
+
+contains
+  Orion.Converters in 'Orion.Converters.pas',
+  Orion.Converters.Json.Nativo in 'Orion.Converters.Json.Nativo.pas',
+  Orion.Converters.Json.Factory in 'Orion.Converters.Json.Factory.pas',
+  Orion.Converters.interfaces in 'Orion.Converters.interfaces.pas',
+  Orion.Converters.Base64 in 'Orion.Converters.Base64.pas',
+  Orion.Converters.Base64.Factory in 'Orion.Converters.Base64.Factory.pas';
+
+end.
